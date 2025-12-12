@@ -1,0 +1,156 @@
+print('selamün aleyküm')
+print('Emre\'nin Pugu')
+print("""selamün
+aleyküm""")
+print("Mehaba\t\t\t\tDünya")
+print("Merhaba\nDünya")
+mesaj = "Yeşil Pug"
+print(mesaj)
+mesaj1 = "Yeşil"
+mesaj2 = "Pug"
+print(mesaj1 + mesaj2)
+print(mesaj1 +" "+ mesaj2)
+print(mesaj1[1])
+print(mesaj1[2])
+print(mesaj1[-2])
+print(mesaj1[0:4])
+print(mesaj1[1:4])
+print(mesaj1[::2])
+print(mesaj1[::3])
+print(mesaj1[::1])
+print(mesaj1[::-1])
+print(mesaj1.upper())
+print(mesaj1)
+mesaj = mesaj.upper()
+print(mesaj)
+mesaj = mesaj.lower()
+print(mesaj)
+mesaj = mesaj.capitalize()
+print(mesaj)
+print(mesaj.startswith("Ye"))
+print(mesaj.startswith("ye"))
+print(mesaj.endswith("pug"))
+print(len(mesaj))
+print(len(mesaj + mesaj2))
+print("Yeşil" + " " + mesaj2)
+print("ktal" * 10)
+
+isim = "Ali"
+
+yas = "20"
+
+print("{} , {} yaşındadır".format(isim,yas))
+
+isim1 = "Ahmet"
+mesajA = "Selamlar"
+
+print("{} , \"{}\" dedi".format(isim1,mesajA))
+
+print(f"{isim1} {mesajA} dedi")
+renkler = ['Siyah', 'Beyaz', 'Sarı', 'Mavi', 'Yeşil']
+
+print(renkler)
+print(type(renkler))
+
+print(len(renkler))
+print(renkler[1]) # 0 1 2 ...
+print(renkler[1:4]) #1 var 4 yok
+print(renkler[:4])
+print(renkler[::2]) # ikişer 1 boşluk bırakıyor
+
+# append
+# insert
+# remove
+# extend
+# pop
+# reverse
+# sot ve sorted
+
+
+print(renkler)
+
+renkler.append('Gri')
+
+print(renkler)
+
+renkler.insert(0,'Lacivert')
+print(renkler)
+
+renkler.remove('Sarı')
+print(renkler)
+
+renkler2 = ['Turuncu', 'Pembe']
+
+renkler.a
+isim="emre"
+print(f"benim adım {isim}")
+sayi1 = 5
+sayi2 = 3.8 # 5**100 veya 22/7 bunları yazınca işlem yapiyo
+
+print(sayi1)
+print(type(sayi1))
+print(type(sayi2))
+
+# toplama +
+# çıkarma-
+# çarpma  *
+# bölme /
+#Tamsayı bölmesi //
+#Kuvvet Alma **
+#Mutlak Değer abs
+#Yuvarlama round
+#işlem önceliği
+
+print(16/5)
+print(16//5)
+print(2**6)
+print(abs(-2.5))
+print(22/7)     #22/7 pi oluyo (3.142857142857143)
+print(round(22/7))
+print(round(4.9785968))
+print(round(22/7,3))
+
+#işlem önceliği
+print(3 * 5 + 6)
+print(3 + 5 * 6)
+print((3 + 2) * 4 + 3)
+
+#Karşılaştırma operatörleri doğru ise True yanlışsa False diyo
+#Eşittir ==
+#Küçüktür <
+#Büyüktür >
+#Küçük eşittir <=
+#Büyük Eşittir >=
+#eşit değildir ! ------> != olarak yazıyon
+
+print(3 == 3)
+print(3 == 5)
+
+a = 1
+b = a
+a = 5
+print(b)
+
+# String ve Integerları Birbirine Çevirme
+abc1 = '100'
+abc2 = 100
+abc3 = int(abc1)
+print(type(abc1))
+print(type(abc2))
+print(abc1 == abc2)
+print(abc3 == abc2)
+
+abc4 = int(3.9)
+print(abc4)  #bu float olduğu için tam kısmını alıyo
+
+klm1 = 123
+klm2 = str(klm1)
+print(klm2)
+print(klm1)
+print(type(klm2))
+
+i = 3
+
+i = i + 5 #veya i += 5,  i *= 5 yaparsanda çarpıyo (/=) (//=)
+
+print(i)
