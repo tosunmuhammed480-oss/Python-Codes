@@ -1,0 +1,43 @@
+import requests
+
+print("🌦  HAVA DURUMU UYGULAMASI (API KEY YOK) 🌦")
+
+city = input("Şehir adı gir (örn: konya): ")
+
+# 🔍 1) Şehri koordinata çevir (Open-Meteo Geocoding, API key istemez)
+geo_url = "https://geocoding-api.open-meteo.com/v1/search"
+geo_params = {
+    "name": city,
+    "count": 1,
+    "language": "tr",
+    "format": "json"
+}
+
+geo_response = requests.get(geo_url, params=geo_params)
+
+if geo_response.status_code != 200 or "results" not in geo_response.json():
+    print("⚠️ Şehir bulunamadı!")
+    exit()
+
+geo_data = geo_response.json()["results"][0]
+lat = geo_data["latitude"]
+lon = geo_data["longitude"]
+
+# 🌤 2) Hava durumu verisi al
+weather_url = "https://api.open-meteo.com/v1/forecast"
+weather_params = {
+    "latitude": lat,
+    "longitude": lon,
+    "current_weather": True
+}
+
+weather_response = requests.get(weather_url, params=weather_params)
+weather_data = weather_response.json()
+
+temp = weather_data["current_weather"]["temperature"]
+wind = weather_data["current_weather"]["windspeed"]
+
+print(f"\n📍 Şehir: {city.capitalize()}")
+print(f"🌡️ Sıcaklık: {temp}°C")
+print(f"💨 Rüzgar: {wind} km/s")
+print("✅ Veri başarıyla getirildi!")
