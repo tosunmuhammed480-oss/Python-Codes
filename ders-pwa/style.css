@@ -1,0 +1,29 @@
+body {
+    font-family: Arial;
+    padding: 20px;
+    background: #fafafa;
+}
+
+.form {
+    margin-bottom: 20px;
+}
+
+.form input, .form select {
+    display: block;
+    margin: 8px 0;
+    padding: 8px;
+    width: 200px;
+}
+
+button {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.day-title {
+    font-weight: bold;
+    margin-top: 20px;
+}

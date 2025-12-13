@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ders Programı</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Manifest (PWA için) -->
+    <link rel="manifest" href="manifest.json">
+
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+    <h1>Ders Programı</h1>
+
+    <div class="form">
+        <select id="day">
+            <option>Pazartesi</option>
+            <option>Salı</option>
+            <option>Çarşamba</option>
+            <option>Perşembe</option>
+            <option>Cuma</option>
+            <option>Cumartesi</option>
+            <option>Pazar</option>
+        </select>
+
+        <input id="title" placeholder="Başlık (Matematik)">
+        <input id="duration" type="number" placeholder="Süre (dk)">
+        <input id="start" placeholder="Başlangıç (HH:MM)">
+        <button onclick="addItem()">Ekle</button>
+    </div>
+
+    <h2>Haftalık Program</h2>
+    <div id="list"></div>
+</body>
+</html>
